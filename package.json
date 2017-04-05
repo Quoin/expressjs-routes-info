@@ -1,6 +1,6 @@
 {
   "name": "@quoin/expressjs-routes-info",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "ExpressJS named routes",
   "main": "lib/index.js",
   "engines": {
@@ -24,7 +24,11 @@
     "routes",
     "resolver"
   ],
-  "author": "Huu Da Tran <HuuDa.Tran@quoininc.com>",
+  "author": {
+    "name": "Hữu Ðà Trần",
+    "email": "HuuDa.Tran@quoininc.com",
+    "url": "https://www.quoininc.com/staff/huu-da-tran/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Quoin/expressjs-routes-info/issues"
