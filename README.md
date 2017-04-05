@@ -15,7 +15,7 @@ const routesInfo = require('./routes-info');
 
 const app = express();
 
-app.use(routesInfo('/something').router);
+app.use(routesInfo('/something', '/').router);
 ```
 
 In your `server/routes-info.js`:
@@ -26,11 +26,12 @@ const RoutesInfo = require('@quoin/expressjs-routes-info');
 const homepageRoutesInfo = require('./homepage').routesInfo;
 const mapRoutesInfo = require('./map').routesInfo;
 
-module.exports = (baseUrl) => {
-    const routesInfo = new RoutesInfo(baseUrl);
+module.exports = (subPath, baseUrl) => {
+    const routesInfo = new RoutesInfo(subPath, baseUrl);
+    const prefix = `${baseUrl}/${subPath}`;
 
-    routesInfo.use(homepageRoutesInfo(`${baseUrl}/`));
-    routesInfo.use(mapRoutesInfo(`${baseUrl}/map`));
+    routesInfo.use(homepageRoutesInfo('/', prefix));
+    routesInfo.use(mapRoutesInfo('/map', prefix));
 
     return routesInfo;
 };
@@ -43,15 +44,23 @@ const RoutesInfo = require('@quoin/expressjs-routes-info');
 
 const controllers = require('./controllers');
 
-module.exports = (baseUrl) => {
-    const routesInfo = new RoutesInfo(baseUrl);
+module.exports = (subPath, baseUrl) => {
+    const routesInfo = new RoutesInfo(subPath, baseUrl);
 
-    routesInfo.route('map', '/:id')
+    routesInfo.route('map', '/{id}')
         .get(controllers.index);
 
     return routesInfo;
 };
 ```
+
+or you can also use the express notation:
+
+```javascript
+    routesInfo.route('map', '/:id')
+        .get(controllers.index);
+```
+
 
 Your `controllers.index` would just be a normal controller with a signature as:
 
