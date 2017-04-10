@@ -1,5 +1,9 @@
 # Releases
 
+## 0.1.4 - 2007-04-10
+
+- Added support for middlewares in `.use()`.
+
 ## 0.1.3 - 2007-04-05
 
 - Removed a `console.log()`.
