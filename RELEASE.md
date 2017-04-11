@@ -1,5 +1,9 @@
 # Releases
 
+## 0.1.5 - 2007-04-11
+
+- Support for query string in path.
+
 ## 0.1.4 - 2007-04-10
 
 - Added support for middlewares in `.use()`.
