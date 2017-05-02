@@ -100,3 +100,12 @@ const RoutesInfo = require('@quoin/expressjs-routes-info');
 console.log(RoutesInfo.expand('map', {id: '0xABCDEF'}));
 // /something/map/0xABCDEF
 ```
+
+## Reset
+
+This should not be needed for normal operation, but was added to allow testing
+of code that depends on this library.
+
+```javascript
+RoutesInfo.reset();
+```
