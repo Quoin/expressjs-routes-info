@@ -1,6 +1,6 @@
 {
   "name": "@quoin/expressjs-routes-info",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "ExpressJS named routes",
   "main": "lib/index.js",
   "engines": {
@@ -45,13 +45,13 @@
     "@quoin/node-test-helpers": "0.2.1",
     "eslint": "3.19.0",
     "eslint-config-standard": "10.2.1",
-    "eslint-plugin-html": "2.0.1",
-    "eslint-plugin-import": "2.2.0",
-    "eslint-plugin-node": "4.2.2",
+    "eslint-plugin-html": "2.0.3",
+    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-node": "5.0.0",
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-standard": "3.0.1",
-    "express": "4.15.2",
-    "mocha": "3.3.0",
-    "nyc": "10.3.0"
+    "express": "4.15.3",
+    "mocha": "3.4.2",
+    "nyc": "11.0.2"
   }
 }
