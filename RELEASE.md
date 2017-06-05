@@ -1,5 +1,10 @@
 # Releases
 
+## 0.1.7 - 2017-06-05
+
+- Splitting code into more modules.
+- Added more tests.
+
 ## 0.1.6 - 2017-05-02
 
 - Adding `.reset()` to allow clearing the cached routes.
