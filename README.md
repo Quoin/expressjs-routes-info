@@ -107,5 +107,16 @@ This should not be needed for normal operation, but was added to allow testing
 of code that depends on this library.
 
 ```javascript
-RoutesInfo.reset();
+
+const routesInfoCache = require('@quoin/expressjs-routes-info/lib/cache');
+
+describe("", () => {
+    beforeEach(() => {
+        routesInfoCache.reset();
+    });
+
+    afterEach(() => {
+        routesInfoCache.reset();
+    });
+});
 ```
