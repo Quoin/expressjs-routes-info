@@ -82,6 +82,15 @@ The difference between the two is what variable name will be used during the
 `.expand()` call. We would agree that the query param should have been `id`,
 instead of `pv`, but this is to demonstrate the options.
 
+You can alternatively pass in an implementations object: (new in 0.1.8)
+
+```javascript
+    routesInfo.route('route-name', '/path/{param}', implementations);
+```
+
+and the library will extract `all`, `get`, `post`, `put` and `delete` and
+assign it to the route for that specific method.
+
 
 Your `controllers.index` would just be a normal controller with a signature as:
 
@@ -100,6 +109,15 @@ const RoutesInfo = require('@quoin/expressjs-routes-info');
 console.log(RoutesInfo.expand('map', {id: '0xABCDEF'}));
 // /something/map/0xABCDEF
 ```
+
+### RoutesInfo.staticPath(name, app, baseUrl, urlPath, folderPath)
+
+Add a named static path to the `app`. Approximatively equivalent to:
+
+```javascript
+    app.use(`${baseUrl}/${urlPath}`, express.static(folderPath));
+```
+
 
 ## Reset
 

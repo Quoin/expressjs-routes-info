@@ -1,6 +1,6 @@
 {
   "name": "@quoin/expressjs-routes-info",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "ExpressJS named routes",
   "main": "lib/index.js",
   "engines": {
@@ -13,7 +13,7 @@
     "coverage": "npm run -s coverage:unit",
     "coverage:unit": "nyc --report-dir=reports/coverage-unit npm run -s test:unit",
     "test": "npm run -s test:unit",
-    "test:unit": "mocha 'lib/**/*.unit.test.js'"
+    "test:unit": "mocha \"lib/**/*.unit.test.js\""
   },
   "repository": {
     "type": "git",
@@ -42,16 +42,16 @@
     "url-template": "2.0.8"
   },
   "devDependencies": {
-    "@quoin/node-test-helpers": "0.2.1",
-    "eslint": "3.19.0",
+    "@quoin/node-test-helpers": "latest",
+    "eslint": "4.3.0",
     "eslint-config-standard": "10.2.1",
-    "eslint-plugin-html": "2.0.3",
-    "eslint-plugin-import": "2.3.0",
-    "eslint-plugin-node": "5.0.0",
+    "eslint-plugin-html": "3.1.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-node": "5.1.1",
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-standard": "3.0.1",
     "express": "4.15.3",
-    "mocha": "3.4.2",
-    "nyc": "11.0.2"
+    "mocha": "3.5.0",
+    "nyc": "11.1.0"
   }
 }

@@ -1,5 +1,10 @@
 # Releases
 
+## 0.1.8 - 2017-06-03
+
+- Adding 'implementations' param to `route()`.
+- Adding `staticPath()`.
+
 ## 0.1.7 - 2017-06-05
 
 - Splitting code into more modules.
