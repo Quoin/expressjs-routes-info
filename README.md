@@ -88,9 +88,9 @@ You can alternatively pass in an implementations object: (new in 0.1.8)
     routesInfo.route('route-name', '/path/{param}', implementations);
 ```
 
-and the library will extract `all`, `get`, `post`, `put` and `delete` and
-assign it to the route for that specific method.
-
+and the library will extract `all` and the
+[HTTP request methods](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
+(beside `connect`), and assign them to the route for that specific method.
 
 Your `controllers.index` would just be a normal controller with a signature as:
 

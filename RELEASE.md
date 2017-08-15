@@ -1,5 +1,9 @@
 # Releases
 
+## 0.1.9 - 2017-08-15
+
+- Adding most of HTTP request method, except `connect` to routes.
+
 ## 0.1.8 - 2017-06-03
 
 - Adding 'implementations' param to `route()`.
