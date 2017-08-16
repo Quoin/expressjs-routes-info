@@ -84,7 +84,30 @@ instead of `pv`, but this is to demonstrate the options.
 
 You can alternatively pass in an implementations object: (new in 0.1.8)
 
+### .route(routeName, routePath, [implementations, [options]])
+
+#### .route(routeName, routePath)
+
+The basic usage will return the expressJS route instance and all methods can
+then be added as you would normally do after defining `.route()`.
+
 ```javascript
+    routesInfo.route('route-name', '/path/{param}')
+        .get(...)
+        .post(...)
+```
+
+#### .route(routeName, routePath, implementations)
+
+Object that is defined as:
+
+```javascript
+    implementations = {
+        get: getImplementation,
+        post: postImplementation,
+        ...
+    };
+
     routesInfo.route('route-name', '/path/{param}', implementations);
 ```
 
@@ -92,14 +115,20 @@ and the library will extract `all` and the
 [HTTP request methods](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
 (beside `connect`), and assign them to the route for that specific method.
 
-Your `controllers.index` would just be a normal controller with a signature as:
+#### .route(routeName, routePath, implementations, options)
 
 ```javascript
-function index(req, res) {
-    ...
-    res.status(200).send();
-}
+    options = {
+        allowPatch: 'application/json',
+        ...
+    };
 ```
+
+This signature is just a quick way to add the `Allow-Patch` header if the
+`patch` implementation is defined to all methods.
+
+
+### .expand(routeName, routeParams)
 
 With this new library, you can now generate the URL dynamically:
 

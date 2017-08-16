@@ -1,5 +1,9 @@
 # Releases
 
+## 0.1.10 - 2017-08-16
+
+- Adding options to `.route()` to define `Allow-Patch` header.
+
 ## 0.1.9 - 2017-08-15
 
 - Adding most of HTTP request method, except `connect` to routes.
