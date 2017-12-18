@@ -1,5 +1,9 @@
 # Releases
 
+## 0.2.0 - 2017-12-18
+
+- Modified `staticPath()` to not include the `baseUrl`.
+
 ## 0.1.10 - 2017-08-16
 
 - Adding options to `.route()` to define `Allow-Patch` header.
