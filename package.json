@@ -1,13 +1,14 @@
 {
   "name": "@quoin/expressjs-routes-info",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ExpressJS named routes",
   "main": "lib/index.js",
   "engines": {
-    "node": ">=6.9.0"
+    "node": ">=8.12.0"
   },
   "scripts": {
-    "prepublish": "npm run -s lint && npm run -s coverage",
+    "prepare": "npm run -s lint",
+    "prepack": "npm run -s coverage",
     "lint": "npm run -s lint:node && npm run -s lint:test",
     "lint:node": "eslint --fix --ignore-pattern '*.test.js' lib",
     "lint:test": "eslint --fix --config=.eslintrc.test.json 'lib/**/*.test.js'",
@@ -39,20 +40,20 @@
     "express": ">=4.0.0"
   },
   "dependencies": {
-    "lodash": "4.17.4",
+    "lodash": "~4.17.11",
     "url-template": "2.0.8"
   },
   "devDependencies": {
     "@quoin/node-test-helpers": "latest",
-    "eslint": "4.13.x",
-    "eslint-config-standard": "10.2.x",
-    "eslint-plugin-html": "4.0.x",
-    "eslint-plugin-import": "2.8.x",
-    "eslint-plugin-node": "5.2.x",
-    "eslint-plugin-promise": "3.6.x",
-    "eslint-plugin-standard": "3.0.1",
+    "eslint": "~5.10.0",
+    "eslint-config-standard": "~12.0.0",
+    "eslint-plugin-html": "~5.0.0",
+    "eslint-plugin-import": "~2.14.0",
+    "eslint-plugin-node": "~8.0.0",
+    "eslint-plugin-promise": "~4.0.1",
+    "eslint-plugin-standard": "~4.0.0",
     "express": "4.16.x",
-    "mocha": "4.0.x",
-    "nyc": "11.3.x"
+    "mocha": "~5.2.0",
+    "nyc": "~13.1.0"
   }
 }

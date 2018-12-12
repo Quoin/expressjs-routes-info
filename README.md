@@ -16,14 +16,14 @@ reconstructing the path from the generated regexp is quite tedious.
 In your `server/app.js`:
 
 ```javascript
-const routesInfo = require('./routes-info');
+const routesInfo = require('./routes');
 
 const app = express();
 
 app.use(routesInfo('/something', '/').router);
 ```
 
-In your `server/routes-info.js`:
+In your `server/routes.js`:
 
 ```javascript
 const RoutesInfo = require('@quoin/expressjs-routes-info');
@@ -42,7 +42,7 @@ module.exports = (subPath, baseUrl) => {
 };
 ```
 
-In your `server/map/routes-info.js`:
+In your `server/map/routes.js`:
 
 ```javascript
 const RoutesInfo = require('@quoin/expressjs-routes-info');
@@ -102,11 +102,11 @@ then be added as you would normally do after defining `.route()`.
 Object that is defined as:
 
 ```javascript
-    implementations = {
+    implementations = Object.freeze({
         get: getImplementation,
         post: postImplementation,
         ...
-    };
+    });
 
     routesInfo.route('route-name', '/path/{param}', implementations);
 ```

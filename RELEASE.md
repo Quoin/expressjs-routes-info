@@ -1,5 +1,12 @@
 # Releases
 
+## 0.2.1 - 2018-12-12
+
+- Updated to node8.
+- Updated dependencies (`npm outdated`).
+- Fixed deprecated `url.parse()` call.
+
+
 ## 0.2.0 - 2017-12-18
 
 - Modified `staticPath()` to not include the `baseUrl`.
