@@ -1,5 +1,9 @@
 # Releases
 
+## 0.3.0 - 2019-05-21
+
+- Adding `RoutesInfo.externalUrl(name, url)`.
+
 ## 0.2.1 - 2018-12-12
 
 - Updated to node8.

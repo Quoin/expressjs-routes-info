@@ -148,6 +148,17 @@ Add a named static path to the `app`. Approximatively equivalent to:
 ```
 
 
+### RoutesInfo.externalUrl(name, url)
+
+Add a route to an external URL.
+
+```javascript
+    > RoutesInfo.externalUrl('hello:world', 'http://external.host/foo/bar/{sub}{?param1,param2}');
+    > RoutesInfo.expand('hello:world', { sub: 'foobar', param2:'value2' });
+    'http:/external.host/foo/bar/foobar?param2=value2'
+```
+
+
 ## Reset
 
 This should not be needed for normal operation, but was added to allow testing
