@@ -1,6 +1,6 @@
 # Releases
 
-## 0.3.0 - 2019-05-21
+## 0.2.2 - 2019-05-21
 
 - Adding `RoutesInfo.externalUrl(name, url)`.
 
