@@ -4,6 +4,7 @@
 
 - Added `RoutesInfo.externalUrl(name, url)`.
 - Added `req` as third param to `RoutesInfo.expand()`.
+- Lodash CVE-2019-10744
 
 ## 0.2.1 - 2018-12-12
 
