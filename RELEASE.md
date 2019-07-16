@@ -1,8 +1,9 @@
 # Releases
 
-## 0.2.2 - 2019-05-21
+## 0.2.2 - 2019-07-12
 
-- Adding `RoutesInfo.externalUrl(name, url)`.
+- Added `RoutesInfo.externalUrl(name, url)`.
+- Added `req` as third param to `RoutesInfo.expand()`.
 
 ## 0.2.1 - 2018-12-12
 

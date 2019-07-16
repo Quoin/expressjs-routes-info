@@ -11,6 +11,7 @@ The idea behind this library is to pass and construct the `req.baseUrl` value
 statically. This value is only available for the current router at runtime, and
 reconstructing the path from the generated regexp is quite tedious.
 
+
 ## Usage
 
 In your `server/app.js`:
@@ -84,7 +85,9 @@ instead of `pv`, but this is to demonstrate the options.
 
 You can alternatively pass in an implementations object: (new in 0.1.8)
 
+
 ### .route(routeName, routePath, [implementations, [options]])
+
 
 #### .route(routeName, routePath)
 
@@ -96,6 +99,7 @@ then be added as you would normally do after defining `.route()`.
         .get(...)
         .post(...)
 ```
+
 
 #### .route(routeName, routePath, implementations)
 
@@ -115,6 +119,7 @@ and the library will extract `all` and the
 [HTTP request methods](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
 (beside `connect`), and assign them to the route for that specific method.
 
+
 #### .route(routeName, routePath, implementations, options)
 
 ```javascript
@@ -128,7 +133,7 @@ This signature is just a quick way to add the `Allow-Patch` header if the
 `patch` implementation is defined to all methods.
 
 
-### .expand(routeName, routeParams)
+### .expand(routeName, routeParams, [req])
 
 With this new library, you can now generate the URL dynamically:
 
@@ -138,6 +143,15 @@ const RoutesInfo = require('@quoin/expressjs-routes-info');
 console.log(RoutesInfo.expand('map', {id: '0xABCDEF'}));
 // /something/map/0xABCDEF
 ```
+
+When passing `req` as the optional third argument, the URL should be generated
+as a full URI (containing the hostname):
+
+```javascript
+console.log(RoutesInfo.expand('map', {id: '0xABCDEF'}, req));
+// https://your-host:port/something/map/0xABCDEF
+```
+
 
 ### RoutesInfo.staticPath(name, app, baseUrl, urlPath, folderPath)
 
@@ -150,13 +164,23 @@ Add a named static path to the `app`. Approximatively equivalent to:
 
 ### RoutesInfo.externalUrl(name, url)
 
-Add a route to an external URL.
+Add a route to an external URL. This will not try to add a route to your
+application.
 
 ```javascript
     > RoutesInfo.externalUrl('hello:world', 'http://external.host/foo/bar/{sub}{?param1,param2}');
     > RoutesInfo.expand('hello:world', { sub: 'foobar', param2:'value2' });
     'http:/external.host/foo/bar/foobar?param2=value2'
 ```
+
+This is not intended to support `mailto:`, so use at your own risk.
+
+
+## Debugging
+
+To enable debugging message, define
+
+    DEBUG=Quoin:expressjs-routes-info:*
 
 
 ## Reset
