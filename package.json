@@ -7,11 +7,11 @@
     "node": ">=8.12.0"
   },
   "scripts": {
-    "prepare": "npm run -s lint",
+    "prepare": "npm run -s eslint",
     "prepack": "npm run -s coverage",
-    "lint": "npm run -s lint:node && npm run -s lint:test",
-    "lint:node": "eslint --fix --ignore-pattern '*.test.js' lib",
-    "lint:test": "eslint --fix --config=.eslintrc.test.json '*.test.js' 'lib/**/*.test.js'",
+    "eslint": "npm run -s eslint:node && npm run -s eslint:test",
+    "eslint:node": "eslint --fix --ignore-pattern '*.test.js' lib",
+    "eslint:test": "eslint --fix --config=.eslintrc.test.json '*.test.js' 'lib/**/*.test.js'",
     "coverage": "npm run -s coverage:unit",
     "coverage:unit": "nyc --report-dir=reports/coverage-unit npm run -s test:unit",
     "test": "npm run -s test:unit",
@@ -40,21 +40,21 @@
     "express": ">=4.0.0"
   },
   "dependencies": {
-    "debug": "~4.1.1",
-    "lodash": "~4.17.19",
+    "debug": "^4.3.1",
+    "lodash": "^4.17.21",
     "url-template": "~2.0.8"
   },
   "devDependencies": {
     "@quoin/node-test-helpers": "~1.0.3",
-    "eslint": "~7.4.0",
-    "eslint-config-standard": "~14.1.1",
-    "eslint-plugin-html": "~6.0.2",
-    "eslint-plugin-import": "~2.22.0",
+    "eslint": "^7.28.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "~11.1.0",
-    "eslint-plugin-promise": "~4.2.1",
-    "eslint-plugin-standard": "~4.0.1",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
     "express": "~4.17.1",
-    "mocha": "~8.0.1",
+    "mocha": "^8.4.0",
     "nyc": "~15.1.0"
   }
 }
