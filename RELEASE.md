@@ -1,5 +1,9 @@
 # Releases
 
+## 0.2.3 - 2021-06-10
+
+- Bumped lodash for CVE-2021-23337.
+
 ## 0.2.2 - 2019-07-12
 
 - Added `RoutesInfo.externalUrl(name, url)`.
