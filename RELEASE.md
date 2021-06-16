@@ -1,5 +1,9 @@
 # Releases
 
+## 1.0.0-rc.1 - 2021-06-16
+
+- Updating node@14
+
 ## 0.2.3 - 2021-06-10
 
 - Bumped lodash for CVE-2021-23337.
