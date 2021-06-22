@@ -1,11 +1,10 @@
 {
   "name": "@quoin/expressjs-routes-info",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "ExpressJS named routes",
   "main": "lib/index.js",
   "publishConfig": {
-    "access": "public",
-    "tag": "node14"
+    "access": "public"
   },
   "engines": {
     "node": ">=14.15.0"
@@ -49,9 +48,9 @@
     "url-template": "~2.0.8"
   },
   "devDependencies": {
-    "@quoin/eslint-config-quoin": "^2.0.0",
-    "@quoin/node-test-helpers": "^2.0.0",
-    "eslint": "^7.28.0",
+    "@quoin/eslint-config-quoin": "^2.0.2",
+    "@quoin/node-test-helpers": "^2.0.1",
+    "eslint": "^7.29.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-html": "^6.1.2",
     "eslint-plugin-import": "^2.23.4",

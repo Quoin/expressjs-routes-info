@@ -1,5 +1,9 @@
 # Releases
 
+## 2.0.1 - 2021-06-21
+
+- Merging into master branch and latest tag.
+
 ## 2.0.0 - 2021-06-18
 
 - Avoid `-rc.*`.
