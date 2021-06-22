@@ -1,8 +1,10 @@
 /.eslintrc.json
 /.eslintrc.test.json
+/.github
 /.npmignore
 /.nyc_output
 /.nycrc
 /lib/**/*.test.js
+/*.test.js
 /reports
 /*.tgz
